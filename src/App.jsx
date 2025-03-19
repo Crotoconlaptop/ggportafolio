@@ -42,42 +42,30 @@ function App() {
       {/* Portfolio */}
       <section id="portfolio" className="portfolio">
         <h2>My Projects</h2>
-        <div className="grid">
+        <div className="grid portfolio-grid">
           <figure>
-            <a href="https://bar-management.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <img src="/bar-manager.png" alt="Project 1: Bar Manager" />
+            <a href="https://inventory-beta-green.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <img src="/inventario.png" alt="Project 1: inventario" className="project-image" />
             </a>
-            <figcaption>Bar-Manager</figcaption>
+            <figcaption>Bar-Inventory</figcaption>
           </figure>
           <figure>
-            <a href="https://ticket-scanner-beige.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <img src="/ticket.png" alt="Project 2: Ticket Scanner" />
+            <a href="https://musica-download-gules.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <img src="/descarga.png" alt="Project 2: descarga" className="project-image" />
             </a>
-            <figcaption>Ticket-Scanner</figcaption>
+            <figcaption>Music-Downloader</figcaption>
           </figure>
           <figure>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src="/project3.png" alt="Project 3" />
+            <a href="https://pax-counter.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <img src="/eventos.png" alt="Project 3: eventos" className="project-image" />
             </a>
-            <figcaption>Project 3</figcaption>
+            <figcaption>Event Calculator</figcaption>
           </figure>
           <figure>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src="/project4.png" alt="Project 4" />
+            <a href="https://bqt.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <img src="/drinks.png" alt="Project 4: drinks" className="project-image" />
             </a>
-            <figcaption>Project 4</figcaption>
-          </figure>
-          <figure>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src="/project5.png" alt="Project 5" />
-            </a>
-            <figcaption>Project 5</figcaption>
-          </figure>
-          <figure>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src="/project6.png" alt="Project 6" />
-            </a>
-            <figcaption>Project 6</figcaption>
+            <figcaption>Drinks Calculator</figcaption>
           </figure>
         </div>
       </section>
@@ -98,7 +86,7 @@ function App() {
       {/* About Me */}
       <section id="about" className="about">
         <h2>About Me</h2>
-        <img src="/imggg.jpg" alt="Your Photo" />
+        <img src="/imggg.jpg" alt="Your Photo" className="about-image" />
         <p>
           Hi, my name is Oscar. I am transitioning from the hospitality industry to web development.
         </p>
@@ -109,7 +97,7 @@ function App() {
         <blockquote className="highlighted-quote">
           "I believe in the power of discipline and focus to turn challenges into opportunities for learning."
         </blockquote>
-        {randomImage && <img src={randomImage} alt="Random Samurai Cyborg Developer" id="generated-image" />}
+        {randomImage && <img src={randomImage} alt="Random Samurai Cyborg Developer" className="samurai-image" />}
       </section>
 
       {/* Chatbot Integration */}
