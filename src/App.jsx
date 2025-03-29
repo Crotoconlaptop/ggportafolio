@@ -83,9 +83,11 @@ function App() {
           <li>HTML5, CSS3, JavaScript</li>
           <li>Vite + React</li>
           <li>Node.js, Express</li>
-          <li>Databases (Supabase, MongoDB, MySQL)</li>
+          <li>Databases (Supabase)</li>
           <li>GitHub</li>
           <li>Prompt Engineering</li>
+          <li>Make (Integromat)</li>
+          <li>Flowise</li>
         </ul>
       </section>
 
@@ -94,7 +96,9 @@ function App() {
         <h2>About Me</h2>
         <img src="/imggg.jpg" alt="Your Photo" className="about-image" />
         <p>
-          Hi, my name is Oscar. I am transitioning from the hospitality industry to web development.
+        Hi, my name is Oscar. I’m currently working as a bartender at a luxury hotel, 
+        but I’m transitioning from the hospitality industry into web development. 
+        I’ve been learning on my own and applying what I’ve learned by building apps to solve real problems behind the bar.
         </p>
       </section>
 
