@@ -43,27 +43,33 @@ function App() {
       <section id="portfolio" className="portfolio">
         <h2>My Projects</h2>
         <div className="grid portfolio-grid">
+        <figure>
+            <a href="https://bqt-booking.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <img src="/booking.png" alt="Project 1: booking" className="project-image" />
+            </a>
+            <figcaption>Banquet-Booking</figcaption>
+          </figure>
           <figure>
             <a href="https://inventory-beta-green.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <img src="/inventario.png" alt="Project 1: inventario" className="project-image" />
+              <img src="/inventario.png" alt="Project 2: inventario" className="project-image" />
             </a>
             <figcaption>Bar-Inventory</figcaption>
           </figure>
           <figure>
             <a href="https://musica-download-gules.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <img src="/descarga.png" alt="Project 2: descarga" className="project-image" />
+              <img src="/descarga.png" alt="Project 3: descarga" className="project-image" />
             </a>
             <figcaption>Music-Downloader</figcaption>
           </figure>
           <figure>
             <a href="https://pax-counter.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <img src="/eventos.png" alt="Project 3: eventos" className="project-image" />
+              <img src="/eventos.png" alt="Project 4: eventos" className="project-image" />
             </a>
             <figcaption>Event Calculator</figcaption>
           </figure>
           <figure>
             <a href="https://bqt.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <img src="/drinks.png" alt="Project 4: drinks" className="project-image" />
+              <img src="/drinks.png" alt="Project 5: drinks" className="project-image" />
             </a>
             <figcaption>Drinks Calculator</figcaption>
           </figure>
