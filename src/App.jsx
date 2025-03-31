@@ -44,6 +44,12 @@ function App() {
         <h2>My Projects</h2>
         <div className="grid portfolio-grid">
         <figure>
+            <a href="https://subscription-tracker-lac.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <img src="/suscription.png" alt="Project 6: suscription" className="project-image" />
+            </a>
+            <figcaption>Subscription-Manager</figcaption>
+          </figure>
+        <figure>
             <a href="https://bqt-booking.vercel.app/" target="_blank" rel="noopener noreferrer">
               <img src="/booking.png" alt="Project 1: booking" className="project-image" />
             </a>
