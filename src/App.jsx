@@ -118,8 +118,8 @@ function App() {
 
       {/* Chatbot Integration */}
       <BubbleChat
-        chatflowid="be61e180-d148-4db7-a498-803ad120d927"
-        apiHost="https://flowiseai-railway-production-57be.up.railway.app"
+            chatflowid="1c3c096c-1ca0-4049-8bf8-66e6b231ca8d"
+            apiHost="https://flowiseai-railway-production-57be.up.railway.app"
       />
 
       {/* Contact */}
