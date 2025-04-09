@@ -21,8 +21,33 @@ function App() {
     setRandomImage(images[Math.floor(Math.random() * images.length)]);
   }, []);
 
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    const onScroll = () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (window.pageYOffset >= sectionTop - 60) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active-link");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active-link");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <div>
+    <div className="cyber-neon">
       {/* Navbar */}
       <nav className="container-fluid">
         <ul>
@@ -34,50 +59,50 @@ function App() {
       </nav>
 
       {/* Header */}
-      <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Discover my journey from hospitality to web development.</p>
+      <header className="hero">
+        <h1>Oscar Gómez Giordano</h1>
+        <p>Web Developer in progress. I turn ideas (and caffeine) into tools and projects with real utility.</p>
       </header>
 
       {/* Portfolio */}
       <section id="portfolio" className="portfolio">
         <h2>My Projects</h2>
         <div className="grid portfolio-grid">
-        <figure>
+          <figure>
             <a href="https://subscription-tracker-lac.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <img src="/suscription.png" alt="Project 6: suscription" className="project-image" />
+              <img src="/suscription.png" alt="Subscription Manager" className="project-image" />
             </a>
-            <figcaption>Subscription-Manager</figcaption>
+            <figcaption>Track and manage your subscriptions easily. Built with React and local storage.</figcaption>
           </figure>
-        <figure>
+          <figure>
             <a href="https://bqt-booking.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <img src="/booking.png" alt="Project 1: booking" className="project-image" />
+              <img src="/booking.png" alt="Banquet Booking" className="project-image" />
             </a>
-            <figcaption>Banquet-Booking</figcaption>
+            <figcaption>App for managing events and reservations. Created to solve real-world hospitality needs.</figcaption>
           </figure>
           <figure>
             <a href="https://inventory-beta-green.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <img src="/inventario.png" alt="Project 2: inventario" className="project-image" />
+              <img src="/inventario.png" alt="Bar Inventory" className="project-image" />
             </a>
-            <figcaption>Bar-Inventory</figcaption>
+            <figcaption>Inventory tracking app for bars. Combines intuitive UI with practical features.</figcaption>
           </figure>
           <figure>
             <a href="https://musica-download-gules.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <img src="/descarga.png" alt="Project 3: descarga" className="project-image" />
+              <img src="/descarga.png" alt="Music Downloader" className="project-image" />
             </a>
-            <figcaption>Music-Downloader</figcaption>
+            <figcaption>Simple music download UI experiment. Focused on interface design and UX.</figcaption>
           </figure>
           <figure>
             <a href="https://pax-counter.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <img src="/eventos.png" alt="Project 4: eventos" className="project-image" />
+              <img src="/eventos.png" alt="Event Calculator" className="project-image" />
             </a>
-            <figcaption>Event Calculator</figcaption>
+            <figcaption>Guest counter and calculator for events. Created with real-world bar experience in mind.</figcaption>
           </figure>
           <figure>
             <a href="https://bqt.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <img src="/drinks.png" alt="Project 5: drinks" className="project-image" />
+              <img src="/drinks.png" alt="Drinks Calculator" className="project-image" />
             </a>
-            <figcaption>Drinks Calculator</figcaption>
+            <figcaption>Tool to calculate drink quantities for events. One of my first attempts at data handling.</figcaption>
           </figure>
         </div>
       </section>
@@ -85,41 +110,39 @@ function App() {
       {/* Skills */}
       <section id="skills">
         <h2>Skills</h2>
-        <ul>
-          <li>HTML5, CSS3, JavaScript</li>
-          <li>Vite + React</li>
-          <li>Node.js, Express</li>
-          <li>Databases (Supabase)</li>
-          <li>GitHub</li>
-          <li>Prompt Engineering</li>
-          <li>Make (Integromat)</li>
-          <li>Flowise</li>
+        <ul className="skills-list">
+          <li>⚡ HTML5, CSS3, JavaScript</li>
+          <li>⚛️ Vite + React</li>
+          <li>🌐 Node.js, Express</li>
+          <li>🛢️ Supabase & SQL basics</li>
+          <li>🔧 GitHub</li>
+          <li>🤖 Automation with Make (Integromat)</li>
+          <li>🧠 Prompt Engineering</li>
+          <li>🧩 Flowise + Langchain basics</li>
         </ul>
       </section>
 
       {/* About Me */}
       <section id="about" className="about">
         <h2>About Me</h2>
-        <img src="/imggg.jpg" alt="Your Photo" className="about-image" />
+        <img src="/imggg.jpg" alt="Oscar GG" className="about-image" />
         <p>
-        Hi, my name is Oscar. I’m currently working as a bartender at a luxury hotel, 
-        but I’m transitioning from the hospitality industry into web development. 
-        I’ve been learning on my own and applying what I’ve learned by building apps to solve real problems behind the bar.
+          I'm Oscar, a self-taught developer transitioning from hospitality. I build apps inspired by real bar work problems. My goal: make simple, elegant tools that solve human problems with tech. My secret weapon? Coffee and bugs.
         </p>
       </section>
 
       {/* Dynamic Image */}
       <section id="dynamic-image">
         <blockquote className="highlighted-quote">
-          "I believe in the power of discipline and focus to turn challenges into opportunities for learning."
+          "Discipline and curiosity are the foundation of all my builds—errors included."
         </blockquote>
         {randomImage && <img src={randomImage} alt="Random Samurai Cyborg Developer" className="samurai-image" />}
       </section>
 
       {/* Chatbot Integration */}
       <BubbleChat
-            chatflowid="1c3c096c-1ca0-4049-8bf8-66e6b231ca8d"
-            apiHost="https://flowiseai-railway-production-57be.up.railway.app"
+        chatflowid="1c3c096c-1ca0-4049-8bf8-66e6b231ca8d"
+        apiHost="https://flowiseai-railway-production-57be.up.railway.app"
       />
 
       {/* Contact */}
@@ -129,14 +152,14 @@ function App() {
           <input type="text" name="firstname" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit">Send</button>
+          <button type="submit">Let's Talk</button>
         </form>
       </section>
 
       {/* Footer */}
       <footer>
         <small>
-          Created with ❤️ by Oscar GG •
+          Built by Oscar GG •
           <a href="https://github.com/Crotoconlaptop/" target="_blank" rel="noopener noreferrer">GitHub</a> •
           <a href="https://www.linkedin.com/in/oscar-gomez-giordano/" target="_blank" rel="noopener noreferrer">LinkedIn</a> •
           <a href="https://www.instagram.com/oscargomezgiordano/" target="_blank" rel="noopener noreferrer">Instagram</a>
