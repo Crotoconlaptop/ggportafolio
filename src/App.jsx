@@ -68,11 +68,17 @@ function App() {
       <section id="portfolio" className="portfolio">
         <h2>My Projects</h2>
         <div className="grid portfolio-grid">
+        <figure>
+            <a href="https://chef-bot-liart.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <img src="/chef.png" alt="Subscription Manager" className="project-image" />
+            </a>
+            <figcaption>AI chatbot that fetches live menu data via API using Flowise GET node.</figcaption>
+          </figure>
           <figure>
             <a href="https://subscription-tracker-lac.vercel.app/" target="_blank" rel="noopener noreferrer">
               <img src="/suscription.png" alt="Subscription Manager" className="project-image" />
             </a>
-            <figcaption>Track and manage your subscriptions easily. Built with React and local storage.</figcaption>
+            <figcaption>Track and manage your subscriptions easily. Built with React and Supabase.</figcaption>
           </figure>
           <figure>
             <a href="https://bqt-booking.vercel.app/" target="_blank" rel="noopener noreferrer">
@@ -90,7 +96,7 @@ function App() {
             <a href="https://musica-download-gules.vercel.app/" target="_blank" rel="noopener noreferrer">
               <img src="/descarga.png" alt="Music Downloader" className="project-image" />
             </a>
-            <figcaption>Simple music download UI experiment. Focused on interface design and UX.</figcaption>
+            <figcaption>Simple music download with code access and Make automation under the hood.</figcaption>
           </figure>
           <figure>
             <a href="https://pax-counter.vercel.app/" target="_blank" rel="noopener noreferrer">
