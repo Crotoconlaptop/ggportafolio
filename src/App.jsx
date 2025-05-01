@@ -147,8 +147,8 @@ function App() {
 
       {/* Chatbot Integration */}
       <BubbleChat
-        chatflowid="22659fda-488a-4311-84c6-1914cb485bad"
-        apiHost="http://62.146.229.231:3000"
+        chatflowid="74767580-5f6f-42b7-9a39-9f83bc16dcdb"
+        apiHost="https://oscarchatbot.duckdns.org"
       />
 
       {/* Contact */}
