@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import { BubbleChat } from "flowise-embed-react";
+import "./pro.css";
+import "./neon.css";
 
 function App() {
   const images = [
@@ -16,11 +17,20 @@ function App() {
   ];
 
   const [randomImage, setRandomImage] = useState(images[0]);
+  const [isNeon, setIsNeon] = useState(false);
 
+  // Asigna clase al body según el modo
+  useEffect(() => {
+    document.body.classList.toggle("neon-mode", isNeon);
+    document.body.classList.toggle("pro-mode", !isNeon);
+  }, [isNeon]);
+
+  // Imagen dinámica
   useEffect(() => {
     setRandomImage(images[Math.floor(Math.random() * images.length)]);
   }, []);
 
+  // Scroll para enlaces de navegación
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll("nav a");
@@ -56,11 +66,17 @@ function App() {
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact" role="button">Contact</a></li>
         </ul>
+        <button
+          onClick={() => setIsNeon(!isNeon)}
+          style={{ marginLeft: "auto", padding: "6px 12px", borderRadius: "6px", fontSize: "0.9rem" }}
+        >
+          {isNeon ? "Light Mode" : "Neon Mode"}
+        </button>
       </nav>
 
       {/* Header */}
       <header className="hero">
-        <h1>Oscar Gómez Giordano</h1>
+        <h1>Oscar Gomez Giordano</h1>
         <p>Web Developer in progress. I turn ideas (and caffeine) into tools and projects with real utility.</p>
       </header>
 
@@ -68,9 +84,9 @@ function App() {
       <section id="portfolio" className="portfolio">
         <h2>My Projects</h2>
         <div className="grid portfolio-grid">
-        <figure>
+          <figure>
             <a href="https://chef-bot-liart.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <img src="/chef.png" alt="Subscription Manager" className="project-image" />
+              <img src="/chef.png" alt="Chef Bot" className="project-image" />
             </a>
             <figcaption>AI chatbot that fetches live menu data via API using Flowise GET node.</figcaption>
           </figure>
@@ -133,7 +149,8 @@ function App() {
         <h2>About Me</h2>
         <img src="/imggg.jpg" alt="Oscar GG" className="about-image" />
         <p>
-          I'm Oscar, a self-taught developer transitioning from hospitality. I build apps inspired by real bar work problems. My goal: make simple, elegant tools that solve human problems with tech. My secret weapon? Coffee and bugs.
+          I'm Oscar, a self-taught developer transitioning from hospitality. I build apps inspired by real bar work problems.
+          My goal: make simple, elegant tools that solve human problems with tech. My secret weapon? Coffee and bugs.
         </p>
       </section>
 
@@ -145,7 +162,7 @@ function App() {
         {randomImage && <img src={randomImage} alt="Random Samurai Cyborg Developer" className="samurai-image" />}
       </section>
 
-      {/* Chatbot Integration */}
+      {/* Chatbot */}
       <BubbleChat
         chatflowid="74767580-5f6f-42b7-9a39-9f83bc16dcdb"
         apiHost="https://oscarchatbot.duckdns.org"
@@ -172,7 +189,7 @@ function App() {
         </small>
       </footer>
 
-      {/* "Back to top" button */}
+      {/* Back to Top */}
       <div className="back-to-top-container">
         <a href="#top" role="button">Back to top</a>
       </div>
