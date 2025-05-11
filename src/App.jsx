@@ -177,7 +177,10 @@ function App() {
       {/* Contact */}
       <section id="contact">
         <h2>Contact</h2>
-        <form action="mailto:ogg@live.com.ar" method="POST" className="grid">
+        <form action="https://formsubmit.co/ogg@live.com.ar" method="POST" className="grid">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://ggportafolio.vercel.app/thanks" />
+    
           <input type="text" name="firstname" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea name="message" placeholder="Your Message" required></textarea>
