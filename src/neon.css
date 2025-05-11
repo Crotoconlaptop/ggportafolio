@@ -119,13 +119,21 @@
     box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
   }
   
-  body.neon-mode .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding-top: 20px;
-    justify-content: center;
+  body.neon-mode .portfolio-grid figcaption {
+    max-width: 220px;
+    margin: 10px auto 0;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.4;
   }
+  
+  body.neon-mode .portfolio-grid figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  
   
   body.neon-mode figure {
     text-align: center;

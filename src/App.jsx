@@ -100,7 +100,8 @@ function App() {
             <a href="https://bqt-booking.vercel.app/" target="_blank" rel="noopener noreferrer">
               <img src="/booking.png" alt="Banquet Booking" className="project-image" />
             </a>
-            <figcaption>App for managing events and reservations. Created to solve real-world hospitality needs.</figcaption>
+            <figcaption>App for managing events and reservations. Created to solve real-world hospitality needs. 
+              The default view is for clients; access the host section via https://bqt-booking.vercel.app/admin</figcaption>
           </figure>
           <figure>
             <a href="https://inventory-beta-green.vercel.app/" target="_blank" rel="noopener noreferrer">
@@ -112,7 +113,7 @@ function App() {
             <a href="https://musica-download-gules.vercel.app/" target="_blank" rel="noopener noreferrer">
               <img src="/descarga.png" alt="Music Downloader" className="project-image" />
             </a>
-            <figcaption>Simple music download with code access and Make automation under the hood.</figcaption>
+            <figcaption>Simple music downloader powered by Make automation. Use the code “admin” to unlock the admin mode and generate download codes.</figcaption>
           </figure>
           <figure>
             <a href="https://pax-counter.vercel.app/" target="_blank" rel="noopener noreferrer">
