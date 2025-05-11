@@ -18,6 +18,7 @@ function App() {
 
   const [randomImage, setRandomImage] = useState(images[0]);
   const [isNeon, setIsNeon] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   // Asigna clase al body según el modo
   useEffect(() => {
@@ -56,6 +57,10 @@ function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleSubmit = () => {
+    setFormSubmitted(true);
+  };
+
   return (
     <div className="cyber-neon">
       {/* Navbar */}
@@ -84,9 +89,9 @@ function App() {
       <section id="portfolio" className="portfolio">
         <h2>My Projects</h2>
         <div className="grid portfolio-grid">
-        <figure>
-              <img src="/chatbot.png" alt="Chast-Bot" className="project-image" />
-            <figcaption>This site includes an integrated chatbot trained with my background and project details. 
+          <figure>
+            <img src="/chatbot.png" alt="Chast-Bot" className="project-image" />
+            <figcaption>This site includes an integrated chatbot trained with my background and project details.
               It’s like having me in a chat bubble—without the coffee dependency.</figcaption>
           </figure>
           <figure>
@@ -105,7 +110,7 @@ function App() {
             <a href="https://bqt-booking.vercel.app/" target="_blank" rel="noopener noreferrer">
               <img src="/booking.png" alt="Banquet Booking" className="project-image" />
             </a>
-            <figcaption>App for managing events and reservations. Created to solve real-world hospitality needs. 
+            <figcaption>App for managing events and reservations. Created to solve real-world hospitality needs.
               The default view is for clients; access the host section via https://bqt-booking.vercel.app/admin</figcaption>
           </figure>
           <figure>
@@ -142,11 +147,11 @@ function App() {
           <li>⚡ HTML5, CSS3, JavaScript</li>
           <li>⚛️ Vite + React</li>
           <li>🌐 Node.js, Express</li>
-          <li>🛢️ Supabase & SQL basics</li>
+          <li>📂 Supabase & SQL basics</li>
           <li>🔧 GitHub</li>
           <li>🤖 Automation with Make (Integromat)</li>
           <li>🧠 Prompt Engineering</li>
-          <li>🧩 Flowise + Langchain basics</li>
+          <li>🧹 Flowise + Langchain basics</li>
         </ul>
       </section>
 
@@ -177,14 +182,22 @@ function App() {
       {/* Contact */}
       <section id="contact">
         <h2>Contact</h2>
-        <form action="https://formsubmit.co/ogg@live.com.ar" method="POST" className="grid">
+        <form
+          action="https://formsubmit.co/ogg@live.com.ar"
+          method="POST"
+          className="grid"
+          onSubmit={handleSubmit}
+        >
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://ggportafolio.vercel.app/thanks" />
-    
           <input type="text" name="firstname" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea name="message" placeholder="Your Message" required></textarea>
           <button type="submit">Let's Talk</button>
+          {formSubmitted && (
+            <p style={{ marginTop: "10px", color: "green" }}>
+              ✅ Your message has been sent!
+            </p>
+          )}
         </form>
       </section>
 
