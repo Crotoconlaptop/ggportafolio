@@ -84,6 +84,11 @@ function App() {
       <section id="portfolio" className="portfolio">
         <h2>My Projects</h2>
         <div className="grid portfolio-grid">
+        <figure>
+              <img src="/chatbot.png" alt="Chast-Bot" className="project-image" />
+            <figcaption>This site includes an integrated chatbot trained with my background and project details. 
+              It’s like having me in a chat bubble—without the coffee dependency.</figcaption>
+          </figure>
           <figure>
             <a href="https://chef-bot-liart.vercel.app/" target="_blank" rel="noopener noreferrer">
               <img src="/chef.png" alt="Chef Bot" className="project-image" />
