@@ -59,7 +59,7 @@
   }
   
   body.neon-mode nav {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     background-color: #1a1a2e;
@@ -281,3 +281,4 @@
       height: 150px;
     }
   }
+  

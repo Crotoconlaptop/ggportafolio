@@ -72,15 +72,15 @@ function App() {
           <li><a href="#contact" role="button">Contact</a></li>
         </ul>
         <button
+          className="toggle-style-button"
           onClick={() => setIsNeon(!isNeon)}
-          style={{ marginLeft: "auto", padding: "6px 12px", borderRadius: "6px", fontSize: "0.9rem" }}
-        >
+          >
           {isNeon ? "Light Mode" : "Neon Mode"}
         </button>
       </nav>
 
       {/* Header */}
-      <header className="hero">
+      <header className="hero" style={{ paddingTop: "110px" }}>
         <h1>Oscar Gomez Giordano</h1>
         <p>Web Developer in progress. I turn ideas (and caffeine) into tools and projects with real utility.</p>
       </header>
