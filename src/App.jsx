@@ -178,13 +178,13 @@ function App() {
   apiHost="https://oscarchatbot.duckdns.org"
   theme={{
     button: {
-      backgroundColor: '#3B81F6',
+      backgroundColor: '#6366F1', // color violeta/azul que combina con ambos modos
       right: 20,
       bottom: 20,
       size: 52,
       dragAndDrop: false,
       iconColor: 'white',
-      customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/bot.svg',
+      customIconSrc: '/avatar.png', // ícono personalizado tuyo
       autoWindowOpen: {
         autoOpen: true,
         openDelay: 2,
@@ -194,7 +194,7 @@ function App() {
     tooltip: {
       showTooltip: true,
       tooltipMessage: 'Ask me anything about Oscar!',
-      tooltipBackgroundColor: '#111827',
+      tooltipBackgroundColor: '#0f172a', // azul oscuro compatible
       tooltipTextColor: '#ffffff',
       tooltipFontSize: 15
     },
@@ -202,10 +202,10 @@ function App() {
       showTitle: true,
       showAgentMessages: true,
       title: "Oscar's Assistant",
-      titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/persona.svg',
+      titleAvatarSrc: '/avatar.png', // avatar personalizado
       welcomeMessage: "Hey! I’m Oscar’s digital assistant. Ask me about his projects, skills, or experience.",
-      backgroundColor: '#ffffff',
-      height: 680,
+      backgroundColor: '#f9fafb', // gris claro, neutro
+      height: 560,
       width: 400,
       fontSize: 15,
       starterPrompts: [
@@ -217,22 +217,30 @@ function App() {
         placeholder: "Ask about Oscar’s work or skills...",
         backgroundColor: '#ffffff',
         textColor: '#111827',
-        sendButtonColor: '#3B81F6',
+        sendButtonColor: '#6366F1',
         autoFocus: true
       },
       botMessage: {
-        backgroundColor: '#f1f5f9',
-        textColor: '#111827',
+        backgroundColor: '#e0e7ff', // lavanda claro
+        textColor: '#1e293b',
         showAvatar: true,
-        avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
+        avatarSrc: '/avatar.png'
       },
       userMessage: {
-        backgroundColor: '#3B81F6',
+        backgroundColor: '#6366F1',
         textColor: '#ffffff',
         showAvatar: false
       }
-    }
+    },
+    customCSS: `
+      @media (min-width: 1024px) {
+        .bubble-chat-window {
+          margin-top: 40px !important;
+        }
+      }
+    `
   }}
+  
 />
 
 
