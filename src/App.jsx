@@ -173,11 +173,68 @@ function App() {
         {randomImage && <img src={randomImage} alt="Random Samurai Cyborg Developer" className="samurai-image" />}
       </section>
 
-      {/* Chatbot */}
       <BubbleChat
-        chatflowid="74767580-5f6f-42b7-9a39-9f83bc16dcdb"
-        apiHost="https://oscarchatbot.duckdns.org"
-      />
+  chatflowid="74767580-5f6f-42b7-9a39-9f83bc16dcdb"
+  apiHost="https://oscarchatbot.duckdns.org"
+  theme={{
+    button: {
+      backgroundColor: '#3B81F6',
+      right: 20,
+      bottom: 20,
+      size: 52,
+      dragAndDrop: false,
+      iconColor: 'white',
+      customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/bot.svg',
+      autoWindowOpen: {
+        autoOpen: true,
+        openDelay: 2,
+        autoOpenOnMobile: false
+      }
+    },
+    tooltip: {
+      showTooltip: true,
+      tooltipMessage: 'Ask me anything about Oscar!',
+      tooltipBackgroundColor: '#111827',
+      tooltipTextColor: '#ffffff',
+      tooltipFontSize: 15
+    },
+    chatWindow: {
+      showTitle: true,
+      showAgentMessages: true,
+      title: "Oscar's Assistant",
+      titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/persona.svg',
+      welcomeMessage: "Hey! I’m Oscar’s digital assistant. Ask me about his projects, skills, or experience.",
+      backgroundColor: '#ffffff',
+      height: 680,
+      width: 400,
+      fontSize: 15,
+      starterPrompts: [
+        "What projects has Oscar built?",
+        "What tech stack does Oscar use?",
+        "Where is Oscar working right now?"
+      ],
+      textInput: {
+        placeholder: "Ask about Oscar’s work or skills...",
+        backgroundColor: '#ffffff',
+        textColor: '#111827',
+        sendButtonColor: '#3B81F6',
+        autoFocus: true
+      },
+      botMessage: {
+        backgroundColor: '#f1f5f9',
+        textColor: '#111827',
+        showAvatar: true,
+        avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
+      },
+      userMessage: {
+        backgroundColor: '#3B81F6',
+        textColor: '#ffffff',
+        showAvatar: false
+      }
+    }
+  }}
+/>
+
 
       {/* Contact */}
       <section id="contact">
