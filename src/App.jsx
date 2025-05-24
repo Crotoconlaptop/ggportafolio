@@ -95,6 +95,13 @@ function App() {
               It’s like having me in a chat bubble—without the coffee dependency.</figcaption>
           </figure>
           <figure>
+            <a href="https://linkedin-post-ebon.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <img src="/linkedin.png" alt="Chef Bot" className="project-image" />
+            </a>
+            <figcaption>Fully automated LinkedIn post generator and publisher, built with Make, OpenAI, and React. 
+              No human posting required.</figcaption>
+          </figure>
+          <figure>
             <a href="https://chef-bot-liart.vercel.app/" target="_blank" rel="noopener noreferrer">
               <img src="/chef.png" alt="Chef Bot" className="project-image" />
             </a>
