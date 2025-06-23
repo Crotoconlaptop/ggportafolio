@@ -102,16 +102,16 @@ function App() {
               No human posting required.</figcaption>
           </figure>
           <figure>
-            <a href="https://chef-bot-liart.vercel.app/" target="_blank" rel="noopener noreferrer">
+            {/*<a href="https://chef-bot-liart.vercel.app/" target="_blank" rel="noopener noreferrer">*/}
               <img src="/chef.png" alt="Chef Bot" className="project-image" />
-            </a>
-            <figcaption>AI chatbot that fetches live menu data via API using Flowise GET node.</figcaption>
+             {/*</a>*/}
+            <figcaption>AI chatbot that fetches live menu data via API using Flowise GET node."under maintenance"</figcaption>
           </figure>
           <figure>
-            <a href="https://subscription-tracker-lac.vercel.app/" target="_blank" rel="noopener noreferrer">
+            {/*<a href="https://subscription-tracker-lac.vercel.app/" target="_blank" rel="noopener noreferrer">*/}
               <img src="/suscription.png" alt="Subscription Manager" className="project-image" />
-            </a>
-            <figcaption>Track and manage your subscriptions easily. Built with React and Supabase.</figcaption>
+            {/*</a>*/}
+            <figcaption>Track and manage your subscriptions easily. Built with React and Supabase."under maintenance"</figcaption>
           </figure>
           <figure>
             <a href="https://bqt-booking.vercel.app/" target="_blank" rel="noopener noreferrer">
